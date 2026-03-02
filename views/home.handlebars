@@ -1,0 +1,21 @@
+<h1>Lista de Usuarios</h1>
+
+
+<ul id="userList">
+  {{#each users}}
+    <li>{{this.name}} - {{this.email}}</li>
+  {{/each}}
+</ul>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  const socket = io();
+  const list = document.getElementById("userList");
+
+  socket.on("updateUsers", users => {
+    list.innerHTML = "";
+    users.forEach(u => {
+      list.innerHTML += `<li>${u.name} - ${u.email}</li>`;
+    });
+  });
+</script>

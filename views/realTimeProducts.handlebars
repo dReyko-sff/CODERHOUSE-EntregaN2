@@ -1,0 +1,12 @@
+<h1>Usuarios en Tiempo Real</h1>
+
+<form id="userForm">
+  <input type="text" name="name" placeholder="Nombre" required>
+  <input type="email" name="email" placeholder="Email" required>
+  <button type="submit">Crear</button>
+</form>
+
+<ul id="userList"></ul>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/realtime.js"></script>
