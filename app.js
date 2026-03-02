@@ -23,11 +23,12 @@ app.engine("handlebars", engine());
 app.set("view engine", "handlebars");
 app.set("views", "./views");
 
-// Routers
+// en la entrega anterior me faltó Routers
+
 app.use("/api/users", usersRouter(userManager, io));
 app.use("/", viewsRouter(userManager));
 
-// Websocket
+// utilizamos websocket
 io.on("connection", socket => {
   console.log("Cliente conectado");
 
@@ -44,7 +45,7 @@ io.on("connection", socket => {
   });
 });
 
-// Servidor local
+
 server.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });

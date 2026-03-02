@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 header {
     height: 15vh;
     display: flex;
@@ -11,4 +14,35 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+    background-color: darkturquoise;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+main {
+    flex: 1
+    ;
+}
+
+h1 {
+    color: black;
+    font-size: 3rem;
+    text-align: center;
+    font-family: cursive;
+}
+
+
+div .card-body {
+    flex: 1 1 auto;
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    background-color: darkcyan;
+    border-color: black;
+    border-radius: 10px;
 }
